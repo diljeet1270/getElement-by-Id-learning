@@ -10,9 +10,15 @@
     <h1>Sales Data</h1>
     <h2 id="sellerName">Seller Name: Jack Simit</h2>
     <h2 id="tsales">Total Sale: <span id="qty">3</span></h2>
-    <button>Add 1 to the sales</button>
-    <button>Add 2to the sales</button>
-
+    <button onclick="sales(1)">Add 1 to the sales</button>
+    <button onclick="sales(2)">Add 2 to the sales</button>
+    <script>
+        function sales(val){
+            let elem = document.getElementById('qty');
+            let quantity = + elem.innerHTML;
+            elem.innerHTML = quantity + val;
+        }
+    </script>
     
 </body>
 </html>
