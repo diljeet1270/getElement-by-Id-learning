@@ -11,7 +11,9 @@
     <div id="ListOfNames"></div>
     <button onclick="showNames()">Show Names</button>
     <button onclick="clearNames()">Clear Names</button>
-
+    <br>
+    <button onclick="sortAsc()">Sort Ascending</button>
+    <button>Sort Decending</button>
 
     <script>
         let names = ['Steven Price', 'Anna Mathews', 'Rohit Raja', 'Ashish Kohli', 'julia Day', 'Nikita Batra'];
@@ -26,6 +28,14 @@
         function clearNames(){
             let element = document.getElementById('ListOfNames');
             element.innerHTML = '';
+        }
+        function sortAsc(){
+            names.sort(sortAsci);
+            showNames();
+        }
+        function sortAsci(name1, name2){
+            return name1.localeCompare(name2)
+
         }
     </script>
 </body>
