@@ -13,7 +13,7 @@
     <button onclick="clearNames()">Clear Names</button>
     <br>
     <button onclick="sortAsc()">Sort Ascending</button>
-    <button>Sort Decending</button>
+    <button onclick="sortDesc()">Sort Decending</button>
 
     <script>
         let names = ['Steven Price', 'Anna Mathews', 'Rohit Raja', 'Ashish Kohli', 'julia Day', 'Nikita Batra'];
@@ -35,6 +35,14 @@
         }
         function sortAsci(name1, name2){
             return name1.localeCompare(name2)
+
+        }
+        function sortDesc(){
+            names.sort(sortDesci);
+            showNames();
+        }
+        function sortDesci(name1, name2){
+            return -1*name1.localeCompare(name2)
 
         }
     </script>
